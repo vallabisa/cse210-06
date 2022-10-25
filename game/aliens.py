@@ -24,7 +24,7 @@ class Aliens(Flying_Objects):
     def update(self):
         check = 0
         if self.position.y <= constants.MAX_Y:
-            self.position.y += self.position.dy
+            self.position.y += (self.position.dy + random.randint(1,5))
             self.position.x += (random.randint(-100,100))
         else:
             self.alive = False
